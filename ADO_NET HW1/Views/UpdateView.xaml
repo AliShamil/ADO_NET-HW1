@@ -1,0 +1,43 @@
+﻿<Window x:Class="ADO_NET_HW1.Views.UpdateView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO_NET_HW1.Views"
+        mc:Ignorable="d"
+        MinWidth="300"
+        Title="UpdateView" Height="450" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ScrollViewer>
+
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="Name"/>
+                <TextBox FontSize="15" Text="{Binding Book.Name,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock  Text="Pages"/>
+                <TextBox FontSize="15" Text="{Binding Book.Pages,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock  Text="Press Year"/>
+                <TextBox FontSize="15"  Text="{Binding Book.YearPress,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock  Text="Themes ID"/>
+                <TextBox FontSize="15" Text="{Binding Book.IdTheme,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock  Text="Category ID"/>
+                <TextBox FontSize="15" Text="{Binding  Book.IdCategory,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock  Text="Author ID"/>
+                <TextBox FontSize="15" Text="{Binding Book.IdAuthor,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock  Text="Press ID"/>
+                <TextBox FontSize="15" Text="{Binding Book.IdPress,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock  Text="Comment"/>
+                <TextBox FontSize="15"  Text="{Binding Book.Comment,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock  Text="Quantity"/>
+                <TextBox FontSize="15"  Text="{Binding Book.Quantity,UpdateSourceTrigger=PropertyChanged}"/>
+
+
+
+                <StackPanel Orientation="Horizontal">
+                    <Button Click="Btn_Save_Click" >Save</Button>
+                    <Button Click="Btn_Cancel_Click">Cancel</Button>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
